@@ -2,7 +2,7 @@ import { getUserData } from "./js/api.js";
 import { createUserPageDOM } from "./js/dom.js";
 
 let state = {
-  activeUserToken: "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",
+  activeUserToken: "github-token", // github deletes the token if its committed
   activeUserDetails: {},
   userRepos: [],
   searchQuery: "",
