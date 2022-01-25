@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="./assets/github_icon.svg">
+    <link rel="stylesheet" href="./style.css" />
+    <script type="module" src="./script.js"></script>
+    <title>github api</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Github-Api</h1>
+      <nav class="nav">
+        <ul>
+          <div class="icon home_icon">
+            <img src="./assets/home_icon.svg" alt="" />
+          </div>
+          <div class="icon search_icon">
+            <img src="./assets/search_icon.svg" alt="" />
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <section class="search hidden">
+      <form>
+        <input type="text" placeholder="enter your github user name" />
+        <input type="submit" value="search"></input>
+        <span>works for only exact matches as of now</span>
+      </form>
+    </section>
+    <main class="data"></main>
+  </body>
+</html>
