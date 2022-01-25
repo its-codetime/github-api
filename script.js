@@ -2,7 +2,7 @@ import { getUserData } from "./js/api.js";
 import { createUserPageDOM } from "./js/dom.js";
 
 let state = {
-  activeUserToken: "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",
+  activeUserToken: "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",
   activeUserDetails: {},
   userRepos: [],
   searchQuery: "",

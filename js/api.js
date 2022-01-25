@@ -1,13 +1,5 @@
 const apiUrl = "https://api.github.com";
 
-const getAuthOptions = (token) => ({
-  method: "GET",
-  headers: {
-    "Content-Type": "application/json",
-    Authorization: `token ${token}`,
-  },
-});
-
 async function fetchData(url, options) {
   // fetch data using fetch api
   try {
@@ -23,13 +15,20 @@ async function fetchData(url, options) {
 export async function getUserData(token, user) {
   // get user date and repos
   try {
+    const authOptions = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Token ${token}`,
+      },
+    };
     const user_url =
       user === "user" ? `${apiUrl}/${user}` : `${apiUrl}/users/${user}`;
     const user_repos_url =
       user === "user"
         ? `${apiUrl}/${user}/repos`
         : `${apiUrl}/users/${user}/repos`;
-    const authOptions = getAuthOptions(`${token}`);
+
     const promises = [
       fetchData(user_url, authOptions),
       fetchData(user_repos_url, authOptions),
